@@ -3,13 +3,13 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './burgerMenu.css';
 import { DateTime } from "luxon";
 
-import { ReactComponent as BurgerIcon } from './burgerIcon.svg';
+import { ReactComponent as BurgerIcon } from './BurgerIcon.svg';
 import { ReactComponent as AdminIcon } from './Admin.svg';
 import { ReactComponent as ExitIcon } from './Exit.svg';
 import { ReactComponent as ModifyIcon } from './ModifyService.svg';
 import { ReactComponent as ServiceIcon } from './Service.svg';
 
-const BurgerMenu = ({ navbarBrand }) => {
+const BurgerMenu = ({ navbarBrand,NavButton1,NavButton2 }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const handleToggle = () => {
@@ -44,7 +44,7 @@ const BurgerMenu = ({ navbarBrand }) => {
                                 </div>
                                 <div className='menu2 position-absolute bottom-0 end-0 me-4'>
                                     <li className="nav-item">
-                                        <a className="nav-link " aria-current="page" href="#"><ModifyIcon /> Modifier Service</a>
+                                        <a className="nav-link " aria-current="page" data-bs-toggle="modal" data-bs-target="#ModifyModal" href="#"><ModifyIcon /> Modifier Service</a>
                                     </li>
                                     <li className="nav-item">
                                         <a className="nav-link text-danger" href="#"><ExitIcon /> Fermer le service</a>
@@ -55,6 +55,23 @@ const BurgerMenu = ({ navbarBrand }) => {
                     </div>
                 </div>
             </nav>
+            <div class="modal modal-dialog-centered" id="ModifyModal" tabindex="-1" aria-labelledby="Modifier" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modification de service</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        êtes-vous sur de vouloir mettre fin au service du soir du {currentDate}  ?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Non, modifier</button>
+                            <button type="button" class="btn btn-primary">Oui terminer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </>
     );
 };

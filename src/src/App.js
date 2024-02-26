@@ -1,6 +1,6 @@
 
 import './App.css';
-import BurgerMenu from './NavBar/burgerMenu';
+import BurgerMenu from './NavBar/BurgerMenu';
 
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div className="menu-container">
-          <BurgerMenu navbarBrand="Qui travaille aujourd’hui ?"/>
+          <BurgerMenu navbarBrand="Qui travaille aujourd’hui ?"  NavButton="Non, modifier" />
         </div>
       </header>
     </div>
