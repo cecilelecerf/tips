@@ -9,7 +9,7 @@ function WhoWorks () {
         <EmployeeList height="500px" />
         <NavLink to="/recapToday">
 
-        <Button text="Suivant" icons={true}/>
+            <Button text="Suivant" icons={true}/>
         </NavLink>
     </main>
     )

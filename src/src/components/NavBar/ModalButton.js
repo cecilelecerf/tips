@@ -1,9 +1,8 @@
-import React from 'react';
 
-const ModalButton = ({ text, cssClass, dismiss }) => {
+function ModalButton (props) {
     return (
-        <button type="button" class={`btn ${cssClass}`} data-bs-dismiss={dismiss ? "modal" : ""}>
-            {text}
+        <button type="button" className={`btn ${props.cssClass}`} data-bs-dismiss={props.dismiss ? "modal" : ""}>
+            {props.text}
         </button>
     );
 };
