@@ -16,14 +16,14 @@ const BurgerMenu = ({ navbarBrand }) => {
         setIsOpen(!isOpen);
     };
 
-    const currentDate = DateTime.local().toLocaleString(DateTime.DATETIME_MED);
+    const currentDate = DateTime.local().toFormat(' DDDD ');
 
     return (
         <>
             <nav className="navbar bg-body-tertiary fixed-top">
                 <div className="container-fluid">
                     <div className="navbar-brand">
-                        <div>{currentDate}</div>
+                        <div className="text-secondary">{currentDate}</div>
                         <a>{navbarBrand}</a>
                     </div>
                     <BurgerIcon onClick={handleToggle} className="navbar-toggler" type="button" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" />
