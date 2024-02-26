@@ -24,10 +24,10 @@ function BurgerMenu(props, { navbarBrand }) {
     const modifyIcon = darkMode ? <ModifyIconDark /> : <ModifyIcon />;
     const [isModifyModalOpen, setIsModifyModalOpen] = useState(false);
     const [isCloseModalOpen, setIsCloseModalOpen] = useState(false);
-
+    
     const openModifyModal = () => setIsModifyModalOpen(true);
     const closeModifyModal = () => setIsModifyModalOpen(false);
-
+    
     const openCloseModal = () => setIsCloseModalOpen(true);
     const closeCloseModal = () => setIsCloseModalOpen(false);
 
@@ -81,30 +81,30 @@ function BurgerMenu(props, { navbarBrand }) {
                 </div>
             </nav>
             <div className={`modal fade ${isModifyModalOpen ? 'show d-block' : ''}`} tabIndex="-1">
-                <div className="modal-dialog">
-                    <div className="modal-content">
-                        <div className="modal-body">
-                            <p>êtes-vous sur de vouloir modifier le service du {currentDate} ??</p>
-                        </div>
-                        <div className="modal-footer">
-                            <button type="button" className="btn btn-secondary" onClick={closeModifyModal}>Close</button>
-                        </div>
-                    </div>
-                </div>
+    <div className="modal-dialog">
+        <div className="modal-content">
+            <div className="modal-body">
+                <p>êtes-vous sur de vouloir modifier le service du {currentDate} ??</p>
             </div>
-            <div className={`modal fade ${isCloseModalOpen ? 'show d-block' : ''}`} tabIndex="-1">
-                <div className="modal-dialog">
-                    <div className="modal-content">
-                        <div className="modal-body">
-                            <p>êtes-vous sur de vouloir mettre fin au service du {currentDate} ??</p>
-                        </div>
-                        <div className="modal-footer">
-                            <button type="button" className="btn btn-secondary" onClick={closeCloseModal}>Close</button>
-                        </div>
-                    </div>
-                </div>
+            <div className="modal-footer">
+                <button type="button" className="btn btn-secondary" onClick={closeModifyModal}>Close</button>
             </div>
-            {isModifyModalOpen || isCloseModalOpen ? <div className="modal-backdrop fade show"></div> : null}
+        </div>
+    </div>
+</div>
+<div className={`modal fade ${isCloseModalOpen ? 'show d-block' : ''}`} tabIndex="-1">
+    <div className="modal-dialog">
+        <div className="modal-content">
+            <div className="modal-body">
+                <p>êtes-vous sur de vouloir mettre fin au service du {currentDate} ??</p>
+            </div>
+            <div className="modal-footer">
+                <button type="button" className="btn btn-secondary" onClick={closeCloseModal}>Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+{isModifyModalOpen || isCloseModalOpen ? <div className="modal-backdrop fade show"></div> : null}
         </>
     );
 };
