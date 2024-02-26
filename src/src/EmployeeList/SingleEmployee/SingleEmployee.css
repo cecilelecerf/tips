@@ -1,0 +1,6 @@
+.Employee{
+    justify-content: space-between;
+}
+.Employee #exampleCheck1{
+    margin: auto 0 !important
+}
