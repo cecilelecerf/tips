@@ -20,6 +20,7 @@ function SingleEmployee(props) {
        <div className="d-flex align-items-center">
          <PicturePeople />
          <p className="ms-3 mb-0">Sarah</p>
+         <LocationPills text="cuisine" />
        </div>
         {props.locationPill &&(
           <LocationPill locationPill={props.locationPill} />
