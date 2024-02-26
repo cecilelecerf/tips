@@ -1,10 +1,10 @@
 
 import "./LocationPill.css"
 
-function LocationPill(props) {
+function LocationPill({location}) {
     return (
       <p className="LocationPill rounded-pill bg-secondary-subtle px-2 text-secondary">
-        {props.locationPill}
+        {location === "kitchen"? "cuisine": "salle"}
       </p>
     );
   }

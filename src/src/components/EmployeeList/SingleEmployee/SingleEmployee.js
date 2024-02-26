@@ -19,7 +19,7 @@ function SingleEmployee(props) {
           <p className="ms-3 mb-0">{props.name}</p>
         </div>
           {props.locationPill &&(
-            <LocationPill locationPill={props.locationPill} />
+            <LocationPill location={props.locationPill} />
           )}
           {
             props.money&&(
