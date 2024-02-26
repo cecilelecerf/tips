@@ -1,17 +1,23 @@
 import './BurgerMenu.css';
 import ModalButton from './ModalButton';
 import { DateTime } from "luxon";
+import DarkModeContext from '../DarkMode/DarkMode';
 
 import { ReactComponent as BurgerIcon } from './BurgerIcon.svg';
 import { ReactComponent as AdminIcon } from './Admin.svg';
 import { ReactComponent as ExitIcon } from './Exit.svg';
 import { ReactComponent as ModifyIcon } from './ModifyService.svg';
 import { ReactComponent as ServiceIcon } from './Service.svg';
-import { useState } from 'react';
+import { useState,useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 
-function BurgerMenu(props) {
+function BurgerMenu(props,{navbarBrand}) {
+    const { darkMode } = useContext(DarkModeContext);
     const [isOpen, setIsOpen] = useState(false);
+    const navBarStyle = darkMode ? "navbar bg-dark fixed-top" : "navbar bg-secondary-subtle fixed-top";
+    const containerClass = darkMode ? 'bg-dark ' : 'bg-secondary-subtlet';
+    const DarkModeTextColor = darkMode ? 'text-light' : 'text-dark';
+
 
     const handleToggle = () => {
         setIsOpen(!isOpen);
@@ -21,8 +27,8 @@ function BurgerMenu(props) {
 
     return (
         <>
-            <nav className="navbar bg-secondary-subtle fixed-top">
-                <div className="container-fluid">
+            <nav className={`navbar bg-secondary-subtle fixed-top ${navBarStyle}`}>
+                <div className={`container-fluid ${containerClass}`}>
                     <div className="navbar-brand mt-3">
                         <div className="text-secondary fs-6">{currentDate}</div>
                         <p className="NavBarBrand text-black fs-1 fw-bold">{props.navbarBrand}</p>
