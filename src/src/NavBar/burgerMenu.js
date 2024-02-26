@@ -23,12 +23,23 @@ const BurgerMenu = () => {
                         </div>
                         <div className="offcanvas-body">
                             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
-                                <li className="nav-item">
-                                    <a className="nav-link active" aria-current="page" href="#">Service</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="#">Administrateur</a>
-                                </li>
+                                <div class='menu1'>
+                                    <li className="nav-item">
+                                        <a className="nav-link active" aria-current="page" href="#">Service</a>
+                                    </li>
+                                    <li className="nav-item">
+                                        <a className="nav-link" href="#">Administrateur</a>
+                                    </li>
+                                </div>
+                                <div class='menu2 fixed-bottom '>
+                                    <li className="nav-item">
+                                        <a className="nav-link " aria-current="page" href="#">Modifier Service</a>
+                                    </li>
+                                    <li className="nav-item">
+                                        <a className="nav-link text-danger" href="#">Fermer le service</a>
+                                    </li>
+                                </div>
+
                             </ul>
                         </div>
                     </div>
