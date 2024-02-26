@@ -21,13 +21,13 @@ function BurgerMenu (props)  {
 
     return (
         <>
-            <nav className="navbar bg-body-tertiary fixed-top">
+            <nav className="navbar bg-secondary-subtle fixed-top">
                 <div className="container-fluid">
-                    <div className="navbar-brand">
-                        <div className="text-secondary">{currentDate}</div>
-                        <p>{props.navbarBrand}</p>
+                    <div className="navbar-brand mt-3">
+                        <div className="text-secondary fs-6">{currentDate}</div>
+                        <p className="NavBarBrand text-black fs-1 fw-bold">{props.navbarBrand}</p>
                     </div>
-                    <BurgerIcon onClick={handleToggle} className="navbar-toggler" type="button" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" />
+                    <BurgerIcon onClick={handleToggle} className="" type="button" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" />
                     <div className={`offcanvas offcanvas-end ${isOpen ? 'show' : ''} NavBarModalOpen`} tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" >
                         <div className="offcanvas-header">
                             <h5 className="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
@@ -50,9 +50,6 @@ function BurgerMenu (props)  {
                                     <li className="nav-item">
                                         <p className="nav-link text-danger" href="#" data-bs-target="#CloseServiceModal" ><ExitIcon /> Fermer le service</p>
                                     </li>
-                                    <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                        Launch demo modal
-                                    </button>
                                 </div>
                             </ul>
                         </div>

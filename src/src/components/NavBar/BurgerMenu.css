@@ -10,5 +10,13 @@
 }
 
 .NavBarModalOpen{
-    width: 50%;
+    width: 50% !important;
+}
+
+.NavBarBrand{
+    white-space: normal;
+}
+
+.navbar-brand{
+    width: 60%;
 }

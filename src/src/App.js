@@ -1,44 +1,51 @@
 
-import { Outlet, RouterProvider, createBrowserRouter} from "react-router-dom"
-import WhoWorks from "./pages/WhoWorks"
+import { RouterProvider, createBrowserRouter} from "react-router-dom"
 import RecapToday from "./pages/RecapToday"
 import AddTips from "./pages/AddTips"
 import BurgerMenu from './components/NavBar/BurgerMenu';
+import WhoWorks from "./pages/WhoWorks";
 
 const router = createBrowserRouter([
   {
-    path:"/",
-    element:<Root />,
-    children:[
-      {
-        path: "/whoWorks",
-        element: <WhoWorks />
-      },
-      {
-        path: "/recapToday",
-        element: <RecapToday />
-      },
-      {
-        path: "/addTips",
-        element: <AddTips />
-      }
-    ]
-  },
+    
+      path: "/",
+      element:
+      <div className="App">      
+        <header className="App-header">
+          <div className="menu-container">
+            <BurgerMenu navbarBrand="Qui travaille aujourd’hui ?"  />
+          </div>
+        </header>
+        <WhoWorks />
+      </div> 
+    },
+    {
+      path: "/recapToday",
+      element:
+      <div className="App">     
+       <header className="App-header">
+          <div className="menu-container">
+            <BurgerMenu navbarBrand="Récapitulatif du service"  />
+          </div>
+        </header><RecapToday />
+      </div> 
+    },
+    {
+      path: "/addTips",
+      element:
+      <div className="App">      
+        <header className="App-header">
+          <div className="menu-container">
+            <BurgerMenu navbarBrand="Ajouter un pourboire"  />
+          </div>
+        </header>
+       <AddTips />
+      </div> 
+    }
+  ,
 ])
 
-function Root(){
-  return(
-  <div className="App"> 
-      <header className="App-header">
-        <div className="menu-container">
-          <BurgerMenu navbarBrand="Qui travaille aujourd’hui ?"  />
-        </div>
-      </header>
-      <Outlet />
 
-  </div>
-  )
-}
 
 function App() {
   return <RouterProvider router={router} />;
