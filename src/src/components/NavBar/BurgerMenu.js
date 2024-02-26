@@ -2,21 +2,26 @@ import './BurgerMenu.css';
 import ModalButton from './ModalButton';
 import { DateTime } from "luxon";
 import DarkModeContext from '../DarkMode/DarkMode';
+import { ReactComponent as AdminIconDark } from './AdminIconDark.svg';
+import { ReactComponent as ModifyIconDark } from './ModifyIconDark.svg';
 
 import { ReactComponent as BurgerIcon } from './BurgerIcon.svg';
-import { ReactComponent as AdminIcon } from './Admin.svg';
+import { ReactComponent as AdminIcon } from './AdminIcon.svg';
 import { ReactComponent as ExitIcon } from './Exit.svg';
 import { ReactComponent as ModifyIcon } from './ModifyService.svg';
 import { ReactComponent as ServiceIcon } from './Service.svg';
-import { useState,useContext } from 'react';
+import { useState, useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 
-function BurgerMenu(props,{navbarBrand}) {
+function BurgerMenu(props, { navbarBrand }) {
     const { darkMode } = useContext(DarkModeContext);
     const [isOpen, setIsOpen] = useState(false);
+
     const navBarStyle = darkMode ? "navbar bg-dark fixed-top" : "navbar bg-secondary-subtle fixed-top";
     const containerClass = darkMode ? 'bg-dark ' : 'bg-secondary-subtlet';
     const DarkModeTextColor = darkMode ? 'text-light' : 'text-dark';
+    const adminIcon = darkMode ? <AdminIconDark /> : <AdminIcon />;
+    const modifyIcon = darkMode ? <ModifyIconDark /> : <ModifyIcon />;
 
 
     const handleToggle = () => {
@@ -43,15 +48,14 @@ function BurgerMenu(props,{navbarBrand}) {
                             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                                 <div className='menu1'>
                                     <li className="nav-item">
-                                        <NavLink className="nav-link active" aria-current="page" to="/whoWorks"><ServiceIcon /> Service</NavLink>
-                                    </li>
+                                        <NavLink className="nav-link active" aria-current="page" to="/whoWorks"><ServiceIcon /> Service</NavLink>                                    </li>
                                     <li className="nav-item">
-                                        <p className="nav-link" href="#"><AdminIcon /> Administrateur</p>
+                                        <p className="nav-link" href="#">{adminIcon} Administrateur</p>
                                     </li>
                                 </div>
                                 <div className='menu2 position-absolute bottom-0 end-0 me-4'>
                                     <li className="nav-item">
-                                        <p className="nav-link " aria-current="page" data-bs-toggle="modal" href="#"><ModifyIcon /> Modifier Service</p>
+                                        <p className="nav-link " aria-current="page" data-bs-toggle="modal" href="#">{modifyIcon} Modifier Service</p>
                                     </li>
                                     <li className="nav-item">
                                         <p className="nav-link text-danger" href="#" data-bs-target="#CloseServiceModal" ><ExitIcon /> Fermer le service</p>
