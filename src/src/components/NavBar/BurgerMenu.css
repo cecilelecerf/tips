@@ -1,0 +1,10 @@
+.btn-rounded {
+    border: 2px solid red;
+    border-radius: 50px;
+    padding: 10px 20px;
+    color: crimson;
+    height: 35px;
+    width: 120px;
+    font-size: 12px;
+
+}
