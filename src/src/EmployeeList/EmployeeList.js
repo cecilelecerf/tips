@@ -2,15 +2,15 @@
 import "./EmployeeList.css"
 import SingleEmployee from "./SingleEmployee/SingleEmployee";
 
-function EmployeeList() {
+function EmployeeList(props) {
     return (
       <div className="EmployeeList overflow-x-scroll ">
-        <SingleEmployee/>
-        <SingleEmployee/>
-        <SingleEmployee/>
-        <SingleEmployee/>
-        <SingleEmployee/>
-        <SingleEmployee/>
+        <SingleEmployee resume={props.resume}/>
+        <SingleEmployee resume={props.resume}/>
+        <SingleEmployee resume={props.resume}/>
+        <SingleEmployee resume={props.resume}/>
+        <SingleEmployee resume={props.resume}/>
+        <SingleEmployee resume={props.resume}/>
       </div>
     );
   }

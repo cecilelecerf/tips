@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <EmployeeList />
+        <EmployeeList resume={true} />
     <Button text="test" icons="true"/>
       </header>
     </div>
