@@ -27,7 +27,7 @@ function BurgerMenu(props) {
                         <div className="text-secondary fs-6">{currentDate}</div>
                         <p className="NavBarBrand text-black fs-1 fw-bold">{props.navbarBrand}</p>
                     </div>
-                    <BurgerIcon onClick={handleToggle} className="navbar-toggler" type="button" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" />
+                    <BurgerIcon onClick={handleToggle}  type="button" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" />
                     <div className={`offcanvas offcanvas-end ${isOpen ? 'show' : ''}`} tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style={{ width: '60%' }}>
                         <div className="offcanvas-header">
                             <h5 className="offcanvas-title" id="offcanvasNavbarLabel"></h5>
