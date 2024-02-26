@@ -26,13 +26,14 @@ const AddTips = () => {
       )}
       <div>
         <div>
-          <FormItem placeholder="cerise" label="Nom de la table" type="text" />
+          <FormItem placeholder="cerise" label="Nom de la table" type="text" darkMode={darkMode} />
           <FormItem
             placeholder="3"
             label="Montant du pourboire"
             type="number"
             value={tipAmount}
             onChange={(event) => handleManualInput(event)}
+            darkMode={darkMode}
           />
         </div>
         <div className="d-flex justify-content-center">
