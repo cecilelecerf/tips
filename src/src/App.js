@@ -1,5 +1,6 @@
 
-import './App.css';
+
+import Button from './Button/Button';
 import EmployeeList from './EmployeeList/EmployeeList';
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <EmployeeList />
-
+    <Button text="test" icons="true"/>
       </header>
     </div>
   );
