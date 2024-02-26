@@ -22,7 +22,8 @@ body {
   :root {
     --primary-color: #ff8c00 !important; /* Remplacez cette valeur par la couleur primaire souhaitée */
     --body-font-family: 'Arial', sans-serif; /* Remplacez 'Your Custom Font' par le nom de votre police */
-  
+  --primary-subtle-color:  #FF6B4036;
+
   }
 /* Utilisez vos variables personnalisées */
 .bg-primary {
@@ -35,6 +36,17 @@ body {
 
   .border-primary {
     border-color: var(--primary-color) !important;;
+  }
+  .bg-primary-subtle {
+    background-color: var(--primary-subtle-color) !important;
+  }
+  
+  .text-primary-subtle {
+    color: var(--primary-subtle-color) !important;
+  }
+
+  .border-primary-subtle {
+    border-color: var(--primary-subtle-color) !important;;
   }
 
   .form-check-input:checked {
