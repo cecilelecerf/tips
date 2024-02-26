@@ -33,7 +33,7 @@ function BurgerMenu(props,{navbarBrand}) {
                         <div className="text-secondary fs-6">{currentDate}</div>
                         <p className={`NavBarBrand fs-1 fw-bold ${DarkModeTextColor}`}>{props.navbarBrand}</p>
                     </div>
-                    <BurgerIcon onClick={handleToggle} className="navbar-toggler" type="button" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" />
+                    <BurgerIcon onClick={handleToggle}  type="button" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" />
                     <div className={`offcanvas offcanvas-end ${isOpen ? 'show' : ''}`} tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style={{ width: '60%' }}>
                         <div className="offcanvas-header">
                             <h5 className="offcanvas-title" id="offcanvasNavbarLabel"></h5>
@@ -43,7 +43,7 @@ function BurgerMenu(props,{navbarBrand}) {
                             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                                 <div className='menu1'>
                                     <li className="nav-item">
-                                        <NavLink className="nav-link active" aria-current="page" to="/whoWorks"><ServiceIcon /> Service</NavLink>
+                                        <NavLink className="nav-link active" aria-current="page" to="/room"><ServiceIcon /> Service</NavLink>
                                     </li>
                                     <li className="nav-item">
                                         <p className="nav-link" href="#"><AdminIcon /> Administrateur</p>

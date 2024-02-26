@@ -4,8 +4,7 @@ import React, { useState, useEffect } from 'react';
 import RecapToday from "./pages/RecapToday"
 import AddTips from "./pages/AddTips"
 import BurgerMenu from './components/NavBar/BurgerMenu';
-import Kitchen from "./pages/Kitchen";
-import Room from "./pages/Room";
+import WhoWorks from "./pages/WhoWorks";
 import DarkModeContext from './components/DarkMode/DarkMode';
 
 
@@ -20,27 +19,28 @@ const router = createBrowserRouter([
             <BurgerMenu navbarBrand="Qui travaille aujourd’hui ?" />
           </div>
         </header>
-        <Room />
-      </div>
-  },
-  {
-
-    path: "/kitchen",
-    element:
-      <div className="App">
+        <WhoWorks location="room" />
+      </div> 
+    },
+    {
+    
+      path: "/kitchen",
+      element:
+      <div className="App">      
         <header className="App-header">
           <div className="menu-container">
             <BurgerMenu navbarBrand="Qui travaille aujourd’hui ?" />
           </div>
         </header>
-        <Kitchen />
-      </div>
-  },
-  {
-    path: "/recapToday",
-    element:
-      <div className="App">
-        <header className="App-header">
+        <WhoWorks location="kitchen" />
+      </div> 
+    },
+    {
+      path: "/recapToday",
+      element:
+      <div className="App">     
+       <header className="App-header">
+
           <div className="menu-container">
             <BurgerMenu navbarBrand="Récapitulatif du service" />
           </div>
