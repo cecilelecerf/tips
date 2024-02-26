@@ -27,11 +27,11 @@ function BurgerMenu(props,{navbarBrand}) {
 
     return (
         <>
-            <nav className={`navbar bg-secondary-subtle fixed-top ${navBarStyle}`}>
+            <nav className={`navbar  fixed-top ${navBarStyle}`}>
                 <div className={`container-fluid ${containerClass}`}>
                     <div className="navbar-brand mt-3">
                         <div className="text-secondary fs-6">{currentDate}</div>
-                        <p className="NavBarBrand text-black fs-1 fw-bold">{props.navbarBrand}</p>
+                        <p className={`NavBarBrand fs-1 fw-bold ${DarkModeTextColor}`}>{props.navbarBrand}</p>
                     </div>
                     <BurgerIcon onClick={handleToggle} className="navbar-toggler" type="button" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" />
                     <div className={`offcanvas offcanvas-end ${isOpen ? 'show' : ''}`} tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style={{ width: '60%' }}>
