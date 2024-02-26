@@ -19,7 +19,7 @@ function SingleEmployee(props) {
      <div className="Employee d-flex justify-content-between p-2 border-bottom">
        <div className="d-flex align-items-center">
          <PicturePeople />
-         <p className="ms-3 mb-0">Sarah</p>
+         <p className="ms-3 mb-0">{props.name}</p>
        </div>
         {props.locationPill &&(
           <LocationPill locationPill={props.locationPill} />
@@ -37,7 +37,7 @@ function SingleEmployee(props) {
     <div className={employeeClass}>
       <div className="d-flex align-items-center">
         <PicturePeople />
-        <p className="ms-3 mb-0">Sarah</p>
+        <p className="ms-3 mb-0">{props.name}</p>
       </div>
       <input
         type="checkbox"

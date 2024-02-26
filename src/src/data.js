@@ -1,0 +1,45 @@
+export const kitchen = [
+    "Lucas Martin",
+    "Emma Johnson",
+    "Alexandre Dubois",
+    "Sophie Leroy",
+    "Nathan Garcia",
+    "Eva Davis",
+    "Thomas Smith",
+    "Clara Martin",
+    "Gabriel Jones",
+    "Léa Dupont",
+    "Antoine Taylor",
+    "Camille Roberts",
+    "Hugo Brown",
+    "Chloé Martin",
+    "Louis Wilson",
+    "Lola Anderson",
+    "Maxime Miller",
+    "Zoé Garcia",
+    "Mathis Davis"
+];
+export const room = [
+    "Olivia Martin",
+    "Noah Johnson",
+    "Sophia Dubois",
+    "Liam Leroy",
+    "Emma Garcia",
+    "Jackson Davis",
+    "Ava Smith",
+    "Aiden Martin",
+    "Isabella Jones",
+    "Lucas Taylor",
+    "Mia Roberts",
+    "Caden Brown",
+    "Amelia Wilson",
+    "Logan Anderson",
+    "Ella Miller",
+    "Grayson Garcia",
+    "Lily Davis",
+    "Carter Martin",
+    "Abigail Anderson",
+    "Henry Wilson"
+];
+
+
