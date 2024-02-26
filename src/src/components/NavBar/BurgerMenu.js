@@ -36,7 +36,7 @@ function BurgerMenu(props, { navbarBrand }) {
 
     return (
         <>
-            <nav className={`navbar  fixed-top ${navBarStyle}`}>
+            <nav className={`navbar ${navBarStyle}`}>
                 <div className={`container-fluid ${containerClass}`}>
                     <div className="navbar-brand mt-3">
                         <div className="text-secondary fs-6">{currentDate}</div>

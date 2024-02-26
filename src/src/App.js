@@ -6,6 +6,8 @@ import AddTips from "./pages/AddTips"
 import BurgerMenu from './components/NavBar/BurgerMenu';
 import WhoWorks from "./pages/WhoWorks";
 import DarkModeContext from './components/DarkMode/DarkMode';
+import Admin from "./pages/Admin";
+import NavBarAdmin from "./components/Admin/NavBar/NavBar";
 
 
 const router = createBrowserRouter([
@@ -58,8 +60,21 @@ const router = createBrowserRouter([
         </header>
         <AddTips />
       </div>
+  },
+  {
+    path: "/admin",
+    element:
+      <div className="App">
+        <header className="App-header">
+          <div className="menu-container">
+            <BurgerMenu navbarBrand="Adminstrateur" />
+          </div>
+        </header>
+        <Admin />
+
+        <NavBarAdmin/>
+      </div>
   }
-  ,
 ])
 
 
