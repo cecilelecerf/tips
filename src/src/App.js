@@ -8,9 +8,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <NavLocation/>
-        <EmployeeList />
-        <Button text="test" icons="true"/>
+        <EmployeeList resume={true} />
+    <Button text="test" icons="true"/>
       </header>
     </div>
   );
