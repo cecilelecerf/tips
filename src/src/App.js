@@ -5,6 +5,8 @@ import AddTips from "./pages/AddTips"
 import BurgerMenu from './components/NavBar/BurgerMenu';
 import Kitchen from "./pages/Kitchen";
 import Room from "./pages/Room";
+import DarkModeContext from './components/DarkMode/DarkMode';
+
 
 const router = createBrowserRouter([
   {
@@ -62,8 +64,32 @@ const router = createBrowserRouter([
 
 
 function App() {
-  return <RouterProvider router={router} />;
+  const [darkMode, setDarkMode] = useState(false);
 
+  const toggleDarkMode = () => {
+    setDarkMode(prevDarkMode => !prevDarkMode);
+  };
+
+
+
+  useEffect(() => {
+    const elements = document.querySelectorAll('*');
+    elements.forEach(el => {
+      if (darkMode) {
+        el.setAttribute('data-bs-theme', 'dark');
+      } else {
+        el.removeAttribute('data-bs-theme');
+      }
+    });
+  }, [darkMode]);
+
+  return (
+    <DarkModeContext.Provider value={{ darkMode, toggleDarkMode }}>
+      <RouterProvider router={router}>
+        <Root />
+      </RouterProvider>
+    </DarkModeContext.Provider>
+  );
 }
 
 export default App;

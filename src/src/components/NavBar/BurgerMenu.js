@@ -10,7 +10,7 @@ import { ReactComponent as ServiceIcon } from './Service.svg';
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
-function BurgerMenu (props)  {
+function BurgerMenu(props) {
     const [isOpen, setIsOpen] = useState(false);
 
     const handleToggle = () => {
@@ -27,10 +27,10 @@ function BurgerMenu (props)  {
                         <div className="text-secondary fs-6">{currentDate}</div>
                         <p className="NavBarBrand text-black fs-1 fw-bold">{props.navbarBrand}</p>
                     </div>
-                    <BurgerIcon onClick={handleToggle} className="" type="button" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" />
-                    <div className={`offcanvas offcanvas-end ${isOpen ? 'show' : ''} NavBarModalOpen`} tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" >
+                    <BurgerIcon onClick={handleToggle} className="navbar-toggler" type="button" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" />
+                    <div className={`offcanvas offcanvas-end ${isOpen ? 'show' : ''}`} tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style={{ width: '60%' }}>
                         <div className="offcanvas-header">
-                            <h5 className="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                            <h5 className="offcanvas-title" id="offcanvasNavbarLabel"></h5>
                             <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" onClick={handleToggle}></button>
                         </div>
                         <div className="offcanvas-body container">
