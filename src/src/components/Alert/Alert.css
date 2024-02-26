@@ -1,0 +1,26 @@
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    z-index: 1;
+
+}
+
+.check-icon {
+    margin-right: 10px;
+    width: 20px;
+    height: 18px;
+}
+
+.alert-light {
+    color: #3CDC4C;
+    background-color: #F7F7F7;
+    border-color: #f2f2f2;
+}
+
+.alert-dark {
+    color: #3CDC4C;
+    background-color: #333;
+    border-color: #333;
+}
