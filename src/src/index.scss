@@ -5,11 +5,15 @@
 header{
   height: 20%;
 }
-main {
+header + * {
   height: 80%;
 }
 a{
   text-decoration: none;
+}
+button{
+  border: none;
+  background-color: transparent;
 }
 body {
   margin: 0;
@@ -35,7 +39,7 @@ body {
 }
 :root {
   --body-font-family: 'Arial', sans-serif; /* Remplacez 'Your Custom Font' par le nom de votre police */
-  --primary-color: #ff8c00 !important; /* Remplacez cette valeur par la couleur primaire souhaitée */
+  --primary-color: #ff8b40 !important; /* Remplacez cette valeur par la couleur primaire souhaitée */
   --primary-subtle-color:  #FF6B4036;
   --secondary-color : #999999 !important;
   --secondary-subtle-color: #F4F4F4 !important;

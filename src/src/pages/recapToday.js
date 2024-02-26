@@ -20,5 +20,4 @@ const RecapToday = () => {
         </main>
     )
 };
-
 export default RecapToday;
