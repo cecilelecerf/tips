@@ -15,7 +15,7 @@ const AddTips = () => {
 
   const handleToggle = () => {
     setIsOpen(!isOpen);
-};
+  };
   return (
     <form className="d-flex flex-column justify-content-between">
       <div>
@@ -26,7 +26,7 @@ const AddTips = () => {
             label="Montant du pourboire"
             type="number"
             value={tipAmount}
-           
+
             onChange={(event) => handleManualInput(event)}
           />
         </div>
@@ -39,8 +39,8 @@ const AddTips = () => {
       <button onClick={handleToggle} >
         <Button text="Ajouter le pourboire" />
       </button>
-      {isOpen&&(
-        <Alert text="Le pourboire à bien été ajouté" checkIcon={true}/>
+      {isOpen && (
+        <Alert text="Le pourboire à bien été ajouté" checkIcon={true} />
       )}
     </form>
   );
