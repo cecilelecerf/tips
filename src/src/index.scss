@@ -23,6 +23,8 @@ body {
   --primary-color: #ff8c00 !important; /* Remplacez cette valeur par la couleur primaire souhaitée */
   --body-font-family: 'Arial', sans-serif; /* Remplacez 'Your Custom Font' par le nom de votre police */
 --primary-subtle-color:  #FF6B4036;
+--secondary-color : #999999 !important;
+--secondary-subtle-color: #F4F4F4 !important;
 
 }
 /* Utilisez vos variables personnalisées */
@@ -34,6 +36,19 @@ body {
   color: var(--primary-color) !important;
 }
 
+.text-secondary {
+  color: var(--secondary-color) !important;
+}
+.text-secondary-emphasis {
+  color: var(--secondary-subtle-color) !important;
+}
+
+.bg-secondary {
+  background-color: var(--secondary-color) !important;
+}
+.bg-secondary-subtle {
+  background-color: var(--secondary-subtle-color) !important;
+}
 .border-primary {
   border-color: var(--primary-color) !important;;
 }
