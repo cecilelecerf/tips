@@ -10,7 +10,7 @@ function recapToday () {
         <EmployeeList height="200px" />
         <NavLink to="/addTips">
 
-        <Button text="Suivant" icons={true}/>
+        <Button text="Commancer le service !"/>
         </NavLink>
     </main>
     )

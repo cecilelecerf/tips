@@ -1,13 +1,13 @@
 
 import FormItem from "./FormItem/FormItem";
-function Form() {
+function FormTips() {
     return (
-    <div>
-        <FormItem placeholder="cerise" label="Nom de la table" />
-        <FormItem placeholder="3" label="Montant du pourboire" />
-    </div>
+    <box>
+        <FormItem placeholder="cerise" label="Nom de la table" type="text"/>
+        <FormItem placeholder="3" label="Montant du pourboire" type="number" />
+    </box>
     );
   }
   
-  export default Form;
+  export default FormTips;
   

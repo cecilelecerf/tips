@@ -1,7 +1,7 @@
 import { NavLink, Outlet, RouterProvider, createBrowserRouter} from "react-router-dom"
-import WhoWorks from "./pages/whoWorks"
-import RecapToday from "./pages/recapToday"
-import AddTips from "./pages/addTips"
+import WhoWorks from "./pages/WhoWorks"
+import RecapToday from "./pages/RecapToday"
+import AddTips from "./pages/AddTips"
 const router = createBrowserRouter([
   {
     path:"/",
@@ -21,14 +21,6 @@ const router = createBrowserRouter([
       }
     ]
   },
-  {
-    path:"/blog",
-    element: <div>Page blog<nav><NavLink to="/">fezefz</NavLink></nav></div>
-  },
-  {
-    path:"/blog/:id",
-    element: <div>Page blog unique<nav><NavLink to="/">fezefz</NavLink></nav></div>
-  }
 ])
 
 function Root(){
@@ -36,8 +28,9 @@ function Root(){
   <div className="App"> 
     <header>
       <nav>
-        <NavLink to="/">erfre</NavLink>
-        <NavLink to="/accueil">Accueil</NavLink>
+        <NavLink to="/whoWorks">Accueil</NavLink>
+        <NavLink to="/recapToday">Recap</NavLink>
+        <NavLink to="/addTips">Recap</NavLink>
       </nav>
     </header>
       <Outlet />
