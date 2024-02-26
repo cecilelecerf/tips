@@ -1,70 +1,70 @@
 body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-      monospace;
-  }
-  @import '~bootstrap/dist/css/bootstrap.min.css';
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-  
-  /* Utilisez vos variables personnalisées */
-  body {
-    font-family: var(--body-font-family);
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+@import '~bootstrap/dist/css/bootstrap.min.css';
 
-  }
-  :root {
-    --primary-color: #ff8c00 !important; /* Remplacez cette valeur par la couleur primaire souhaitée */
-    --body-font-family: 'Arial', sans-serif; /* Remplacez 'Your Custom Font' par le nom de votre police */
-  --primary-subtle-color:  #FF6B4036;
-  --secondary-color : #999999 !important;
-  --secondary-subtle-color: #F4F4F4 !important;
 
-  }
+/* Utilisez vos variables personnalisées */
+body {
+  font-family: var(--body-font-family);
+
+}
+:root {
+  --primary-color: #ff8c00 !important; /* Remplacez cette valeur par la couleur primaire souhaitée */
+  --body-font-family: 'Arial', sans-serif; /* Remplacez 'Your Custom Font' par le nom de votre police */
+--primary-subtle-color:  #FF6B4036;
+--secondary-color : #999999 !important;
+--secondary-subtle-color: #F4F4F4 !important;
+
+}
 /* Utilisez vos variables personnalisées */
 .bg-primary {
-    background-color: var(--primary-color) !important;
-  }
-  
-  .text-primary {
-    color: var(--primary-color) !important;
-  }
+  background-color: var(--primary-color) !important;
+}
 
-  .text-secondary {
-    color: var(--secondary-color) !important;
-  }
-  .text-secondary-emphasis {
-    color: var(--secondary-subtle-color) !important;
-  }
+.text-primary {
+  color: var(--primary-color) !important;
+}
 
-  .bg-secondary {
-    background-color: var(--secondary-color) !important;
-  }
-  .bg-secondary-subtle {
-    background-color: var(--secondary-subtle-color) !important;
-  }
-  .border-primary {
-    border-color: var(--primary-color) !important;;
-  }
-  .bg-primary-subtle {
-    background-color: var(--primary-subtle-color) !important;
-  }
-  
-  .text-primary-subtle {
-    color: var(--primary-subtle-color) !important;
-  }
+.text-secondary {
+  color: var(--secondary-color) !important;
+}
+.text-secondary-emphasis {
+  color: var(--secondary-subtle-color) !important;
+}
 
-  .border-primary-subtle {
-    border-color: var(--primary-subtle-color) !important;;
-  }
+.bg-secondary {
+  background-color: var(--secondary-color) !important;
+}
+.bg-secondary-subtle {
+  background-color: var(--secondary-subtle-color) !important;
+}
+.border-primary {
+  border-color: var(--primary-color) !important;;
+}
+.bg-primary-subtle {
+  background-color: var(--primary-subtle-color) !important;
+}
 
-  .form-check-input:checked {
-    background-color: var(--primary-color) !important;
-    border-color: var(--primary-color) !important;
+.text-primary-subtle {
+  color: var(--primary-subtle-color) !important;
+}
+
+.border-primary-subtle {
+  border-color: var(--primary-subtle-color) !important;;
+}
+
+.form-check-input:checked {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
 }
