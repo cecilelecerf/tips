@@ -22,10 +22,16 @@ function BurgerMenu(props, { navbarBrand }) {
     const DarkModeTextColor = darkMode ? 'text-light' : 'text-dark';
     const adminIcon = darkMode ? <AdminIconDark /> : <AdminIcon />;
     const modifyIcon = darkMode ? <ModifyIconDark /> : <ModifyIcon />;
-    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isModifyModalOpen, setIsModifyModalOpen] = useState(false);
+    const [isCloseModalOpen, setIsCloseModalOpen] = useState(false);
 
-    const openModal = () => setIsModalOpen(true);
-    const closeModal = () => setIsModalOpen(false);
+    const openModifyModal = () => setIsModifyModalOpen(true);
+    const closeModifyModal = () => setIsModifyModalOpen(false);
+
+    const openCloseModal = () => setIsCloseModalOpen(true);
+    const closeCloseModal = () => setIsCloseModalOpen(false);
+
+
 
 
     const handleToggle = () => {
@@ -59,10 +65,14 @@ function BurgerMenu(props, { navbarBrand }) {
                                 </div>
                                 <div className='menu2 position-absolute bottom-0 end-0 me-4'>
                                     <li className="nav-item">
-                                        <a><p className="nav-link " aria-current="page" onClick={openModal}>{modifyIcon} Modifier Service</p></a>
+                                        <a href="#" className="nav-link " aria-current="page" onClick={openModifyModal}>
+                                            {modifyIcon} Modifier Service
+                                        </a>
                                     </li>
                                     <li className="nav-item">
-                                        <p className="nav-link text-danger" onClick={openModal}><ExitIcon /> Fermer le service</p>
+                                        <a href="#" className="nav-link text-danger" onClick={openCloseModal}>
+                                            <ExitIcon /> Fermer le service
+                                        </a>
                                     </li>
                                 </div>
                             </ul>
@@ -70,26 +80,31 @@ function BurgerMenu(props, { navbarBrand }) {
                     </div>
                 </div>
             </nav>
-            {isModalOpen && (
-                <div className="modal" tabindex="-1">
-                    <div className="modal-dialog">
-                        <div className="modal-content">
-                            <div className="modal-header">
-                                <h5 className="modal-title">Modal title</h5>
-                                <button type="button" className="btn-close" onClick={closeModal}></button>
-                            </div>
-                            <div className="modal-body">
-                                <p>Modal body text goes here.</p>
-                            </div>
-                            <div className="modal-footer">
-                                <button type="button" className="btn btn-secondary" onClick={closeModal}>Close</button>
-                                <button type="button" className="btn btn-primary">Save changes</button>
-                            </div>
+            <div className={`modal fade ${isModifyModalOpen ? 'show d-block' : ''}`} tabIndex="-1">
+                <div className="modal-dialog">
+                    <div className="modal-content">
+                        <div className="modal-body">
+                            <p>êtes-vous sur de vouloir modifier le service du {currentDate} ??</p>
+                        </div>
+                        <div className="modal-footer">
+                            <button type="button" className="btn btn-secondary" onClick={closeModifyModal}>Close</button>
                         </div>
                     </div>
                 </div>
-            )}
-
+            </div>
+            <div className={`modal fade ${isCloseModalOpen ? 'show d-block' : ''}`} tabIndex="-1">
+                <div className="modal-dialog">
+                    <div className="modal-content">
+                        <div className="modal-body">
+                            <p>êtes-vous sur de vouloir mettre fin au service du {currentDate} ??</p>
+                        </div>
+                        <div className="modal-footer">
+                            <button type="button" className="btn btn-secondary" onClick={closeCloseModal}>Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {isModifyModalOpen || isCloseModalOpen ? <div className="modal-backdrop fade show"></div> : null}
         </>
     );
 };
