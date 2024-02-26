@@ -1,3 +1,4 @@
+import LocationPills from "../LocationPills/LocationPills";
 import PicturePeople from "../PicturePeople/PicturePeople";
 import "./SingleEmployee.css"
 import React, { useState } from "react";
@@ -19,6 +20,7 @@ function SingleEmployee(props) {
        <div className="d-flex align-items-center">
          <PicturePeople />
          <p className="ms-3 mb-0">Sarah</p>
+         <LocationPills text="cuisine" />
        </div>
      </div>
    );
