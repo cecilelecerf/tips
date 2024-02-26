@@ -1,7 +1,5 @@
-
-
-import Button from './Button/Button';
-import EmployeeList from './EmployeeList/EmployeeList';
+import Button from "./components/Button/Button"
+import EmployeeList from "./components/EmployeeList/EmployeeList"
 
 function App() {
   return (
