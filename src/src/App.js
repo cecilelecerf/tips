@@ -1,15 +1,18 @@
 
-import { Outlet, RouterProvider, createBrowserRouter} from "react-router-dom"
+import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom"
+import React, { useState, useEffect, useContext } from 'react';
 import WhoWorks from "./pages/WhoWorks"
 import RecapToday from "./pages/RecapToday"
 import AddTips from "./pages/AddTips"
 import BurgerMenu from './components/NavBar/BurgerMenu';
+import DarkModeContext from './components/DarkMode/DarkMode';
+
 
 const router = createBrowserRouter([
   {
-    path:"/",
-    element:<Root />,
-    children:[
+    path: "/",
+    element: <Root />,
+    children: [
       {
         path: "/whoWorks",
         element: <WhoWorks />
@@ -44,9 +47,11 @@ function Root() {
 function App() {
   const [darkMode, setDarkMode] = useState(false);
 
-  const handleSwitchChange = () => {
-    setDarkMode(!darkMode);
+  const toggleDarkMode = () => {
+    setDarkMode(prevDarkMode => !prevDarkMode);
   };
+
+
 
   useEffect(() => {
     const elements = document.querySelectorAll('*');
@@ -60,10 +65,10 @@ function App() {
   }, [darkMode]);
 
   return (
-    <DarkModeContext.Provider value={{ darkMode, handleSwitchChange }}>
-      <Router>
+    <DarkModeContext.Provider value={{ darkMode, toggleDarkMode }}>
+      <RouterProvider router={router}>
         <Root />
-      </Router>
+      </RouterProvider>
     </DarkModeContext.Provider>
   );
 }

@@ -28,9 +28,9 @@ const BurgerMenu = ({ navbarBrand }) => {
                         <a>{navbarBrand}</a>
                     </div>
                     <BurgerIcon onClick={handleToggle} className="navbar-toggler" type="button" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" />
-                    <div className={`offcanvas offcanvas-end ${isOpen ? 'show' : ''}`} tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style={{ width: '50%' }}>
+                    <div className={`offcanvas offcanvas-end ${isOpen ? 'show' : ''}`} tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style={{ width: '60%' }}>
                         <div className="offcanvas-header">
-                            <h5 className="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                            <h5 className="offcanvas-title" id="offcanvasNavbarLabel"></h5>
                             <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" onClick={handleToggle}></button>
                         </div>
                         <div className="offcanvas-body container">
@@ -45,14 +45,11 @@ const BurgerMenu = ({ navbarBrand }) => {
                                 </div>
                                 <div className='menu2 position-absolute bottom-0 end-0 me-4'>
                                     <li className="nav-item">
-                                        <a className="nav-link " aria-current="page" data-bs-toggle="modal" href="#"><ModifyIcon /> Modifier Service</a>
+                                        <a className="nav-link " aria-current="page" data-bs-toggle="modal" href=""><ModifyIcon /> Modifier Service</a>
                                     </li>
                                     <li className="nav-item">
                                         <a className="nav-link text-danger" href="#" data-bs-target="#CloseServiceModal" ><ExitIcon /> Fermer le service</a>
                                     </li>
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                        Launch demo modal
-                                    </button>
                                 </div>
                             </ul>
                         </div>
