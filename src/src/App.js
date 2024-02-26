@@ -26,24 +26,46 @@ const router = createBrowserRouter([
   },
 ])
 
-function Root(){
-  return(
-  <div className="App"> 
+function Root() {
+  const { darkMode, handleSwitchChange } = useContext(DarkModeContext);
+
+  return (
+    <div className="App">
       <header className="App-header">
         <div className="menu-container">
-          <BurgerMenu navbarBrand="Qui travaille aujourd’hui ?"  />
+          <BurgerMenu navbarBrand="Qui travaille aujourd’hui ?" />
         </div>
       </header>
       <Outlet />
-
-  </div>
+    </div>
   )
 }
 
 function App() {
-  return <RouterProvider router={router} />;
-  
+  const [darkMode, setDarkMode] = useState(false);
 
+  const handleSwitchChange = () => {
+    setDarkMode(!darkMode);
+  };
+
+  useEffect(() => {
+    const elements = document.querySelectorAll('*');
+    elements.forEach(el => {
+      if (darkMode) {
+        el.setAttribute('data-bs-theme', 'dark');
+      } else {
+        el.removeAttribute('data-bs-theme');
+      }
+    });
+  }, [darkMode]);
+
+  return (
+    <DarkModeContext.Provider value={{ darkMode, handleSwitchChange }}>
+      <Router>
+        <Root />
+      </Router>
+    </DarkModeContext.Provider>
+  );
 }
 
 export default App;

@@ -5,7 +5,8 @@ import EmployeeList from "../components/EmployeeList/EmployeeList";
 import Button from "../components/Button/Button";
 import Switch from "../components/Switch/Switch";
 import { NavLink } from "react-router-dom";
-import DarkModeContext from '../DarkModeContext';
+import DarkModeContext from '../components/DarkMode/DarkMode';
+
 
 function RecapToday() {
     const { darkMode, handleSwitchChange } = useContext(DarkModeContext);
