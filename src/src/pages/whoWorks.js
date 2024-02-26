@@ -4,7 +4,7 @@ import Button from "../components/Button/Button"
 import { NavLink} from "react-router-dom"
 function WhoWorks () {
     return (
-    <main className="d-flex flex-column justify-content-between">
+    <main className="d-flex flex-column justify-content-between " data-bs-theme="dark">
         <NavLocation />
         <EmployeeList height="500px" />
         <NavLink to="/recapToday">
