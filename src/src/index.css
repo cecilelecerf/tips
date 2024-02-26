@@ -61,6 +61,14 @@ body {
   border-color: var(--primary-subtle-color) !important;
 }
 
+.border-secondary {
+  border-color: var(--secondary-color) !important;
+}
+
+.border-secondary-subtle {
+  border-color: var(--secondary-subtle-color) !important;
+}
+
 .form-check-input:checked {
   background-color: var(--primary-color) !important;
   border-color: var(--primary-color) !important;
