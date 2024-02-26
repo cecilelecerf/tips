@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div className="menu-container">
-          <BurgerMenu />
+          <BurgerMenu navbarBrand="Qui travaille aujourd’hui ?"/>
         </div>
       </header>
     </div>

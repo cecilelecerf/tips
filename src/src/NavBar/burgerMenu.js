@@ -1,24 +1,31 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './burgerMenu.css';
+import { DateTime } from "luxon";
+
 import { ReactComponent as BurgerIcon } from './burgerIcon.svg';
 import { ReactComponent as AdminIcon } from './Admin.svg';
 import { ReactComponent as ExitIcon } from './Exit.svg';
 import { ReactComponent as ModifyIcon } from './ModifyService.svg';
 import { ReactComponent as ServiceIcon } from './Service.svg';
 
-const BurgerMenu = () => {
+const BurgerMenu = ({ navbarBrand }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const handleToggle = () => {
         setIsOpen(!isOpen);
     };
 
+    const currentDate = DateTime.local().toLocaleString(DateTime.DATETIME_MED);
+
     return (
         <>
             <nav className="navbar bg-body-tertiary fixed-top">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="#">Qui travaille aujourd’hui ?</a>
+                    <div className="navbar-brand">
+                        <div>{currentDate}</div>
+                        <a>{navbarBrand}</a>
+                    </div>
                     <BurgerIcon onClick={handleToggle} className="navbar-toggler" type="button" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" />
                     <div className={`offcanvas offcanvas-end ${isOpen ? 'show' : ''}`} tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style={{ width: '50%' }}>
                         <div className="offcanvas-header">
