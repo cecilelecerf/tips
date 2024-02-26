@@ -23,7 +23,7 @@ function SingleEmployee(props) {
           )}
           {
             props.money&&(
-              <p className="text-primary">{props.money}</p>
+              <p className="text-primary">{props.money} €</p>
             )
           }
       </div>
