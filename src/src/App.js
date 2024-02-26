@@ -3,7 +3,8 @@ import { RouterProvider, createBrowserRouter} from "react-router-dom"
 import RecapToday from "./pages/RecapToday"
 import AddTips from "./pages/AddTips"
 import BurgerMenu from './components/NavBar/BurgerMenu';
-import WhoWorks from "./pages/WhoWorks";
+import Kitchen from "./pages/Kitchen";
+import Room from "./pages/Room";
 
 const router = createBrowserRouter([
   {
@@ -16,7 +17,20 @@ const router = createBrowserRouter([
             <BurgerMenu navbarBrand="Qui travaille aujourd’hui ?"  />
           </div>
         </header>
-        <WhoWorks />
+        <Room />
+      </div> 
+    },
+    {
+    
+      path: "/kitchen",
+      element:
+      <div className="App">      
+        <header className="App-header">
+          <div className="menu-container">
+            <BurgerMenu navbarBrand="Qui travaille aujourd’hui ?"  />
+          </div>
+        </header>
+        <Kitchen />
       </div> 
     },
     {

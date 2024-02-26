@@ -3,23 +3,28 @@ import SingleEmployee from "./SingleEmployee/SingleEmployee";
 
 function EmployeeList(props) {
   const containerStyle = {
-    maxHeight: props.height || "auto" // Utilisez "auto" si aucune hauteur n'est spécifiée
+    maxHeight: props.height || "auto",
   };
-    return (
-      <div className="EmployeeList overflow-x-scroll " style={containerStyle}>
-        <SingleEmployee  />
-        <SingleEmployee resume={props.resume} locationPill="cuisine"/>
-        <SingleEmployee resume={props.resume} money="3"/>
-        <SingleEmployee resume={props.resume}/>
-        <SingleEmployee resume={props.resume}/>
-        <SingleEmployee resume={props.resume}/>
-        <SingleEmployee resume={props.resume}/>
-        <SingleEmployee resume={props.resume}/>
-        <SingleEmployee resume={props.resume}/>
-        <SingleEmployee resume={props.resume}/>
-      </div>
-    );
-  }
-  
-  export default EmployeeList;
+
+  const handleEmployeeClick = (employee) => {
+    props.onEmployeeSelect(employee);
+  };
+
+  return (
+    <div className="EmployeeList overflow-x-scroll" style={containerStyle}>
+      {props.data.map((employee, index) => (
+        <div key={index} onClick={() => handleEmployeeClick(employee)}>
+          <SingleEmployee name={employee} locationPill={props.location} />
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export default EmployeeList;
+
+
+
+
+
   
