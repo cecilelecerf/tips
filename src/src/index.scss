@@ -19,11 +19,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.menu-container {
-  position: absolute;
-  top: 100;
-  right: 0;
-}
 
 
 code {
@@ -71,7 +66,6 @@ body {
 .text-secondary-emphasis {
   color: var(--secondary-subtle-color) !important;
 }
-
 
 .border-primary {
   border-color: var(--primary-color) !important;;
