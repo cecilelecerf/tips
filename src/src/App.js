@@ -1,9 +1,8 @@
 
-import { NavLink, Outlet, RouterProvider, createBrowserRouter} from "react-router-dom"
+import { Outlet, RouterProvider, createBrowserRouter} from "react-router-dom"
 import WhoWorks from "./pages/WhoWorks"
 import RecapToday from "./pages/RecapToday"
 import AddTips from "./pages/AddTips"
-import './App.css';
 import BurgerMenu from './components/NavBar/BurgerMenu';
 
 const router = createBrowserRouter([
