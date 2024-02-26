@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-import './burgerMenu.css';
+import './BurgerMenu.css';
 import ModalButton from './ModalButton';
 import { DateTime } from "luxon";
 
