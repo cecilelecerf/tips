@@ -1,15 +1,11 @@
-import React, { useState } from 'react';
-import 'bootstrap/dist/css/bootstrap.css';
+import React from 'react';
 
-
-
-const NavButton = () => {
-
+const ModalButton = ({ text, cssClass, dismiss }) => {
     return (
-        <>
-            <button type="button" class="btn btn-outline-danger text-danger-emphasis">Danger</button>
-        </>
+        <button type="button" class={`btn ${cssClass}`} data-bs-dismiss={dismiss ? "modal" : ""}>
+            {text}
+        </button>
     );
 };
 
-export default BurgerMenu;
+export default ModalButton;
