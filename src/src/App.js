@@ -1,5 +1,6 @@
 
 import { RouterProvider, createBrowserRouter} from "react-router-dom"
+import React, {useState,useEffect } from 'react';
 import RecapToday from "./pages/RecapToday"
 import AddTips from "./pages/AddTips"
 import BurgerMenu from './components/NavBar/BurgerMenu';
@@ -86,7 +87,6 @@ function App() {
   return (
     <DarkModeContext.Provider value={{ darkMode, toggleDarkMode }}>
       <RouterProvider router={router}>
-        <Root />
       </RouterProvider>
     </DarkModeContext.Provider>
   );
