@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './burgerMenu.css';
-import { ReactComponent as BurgerIcon } from './burgerIcon.svg';
+import { ReactComponent as BurgerIcon } from './Admin.svg';
+import { ReactComponent as BurgerIcon } from './Exit.svg';
+import { ReactComponent as BurgerIcon } from './Exit.svg';
+import { ReactComponent as BurgerIcon } from './Service.svg';
 
 const BurgerMenu = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -23,23 +26,22 @@ const BurgerMenu = () => {
                         </div>
                         <div className="offcanvas-body">
                             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
-                                <div class='menu1'>
+                                <div className='menu1'>
                                     <li className="nav-item">
-                                        <a className="nav-link active" aria-current="page" href="#">Service</a>
+                                        <a className="nav-link active" aria-current="page" href="#"><Service /> Service</a>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link" href="#">Administrateur</a>
-                                    </li>
-                                </div>
-                                <div class='menu2 fixed-bottom '>
-                                    <li className="nav-item">
-                                        <a className="nav-link " aria-current="page" href="#">Modifier Service</a>
-                                    </li>
-                                    <li className="nav-item">
-                                        <a className="nav-link text-danger" href="#">Fermer le service</a>
+                                        <a className="nav-link" href="#"><Admin /> Administrateur</a>
                                     </li>
                                 </div>
-
+                                <div className='menu2 fixed-bottom end-0 me-3'>
+                                    <li className="nav-item">
+                                        <a className="nav-link " aria-current="page" href="#"><Modify /> Modifier Service</a>
+                                    </li>
+                                    <li className="nav-item">
+                                        <a className="nav-link text-danger" href="#"><Exit /> Fermer le service</a>
+                                    </li>
+                                </div>
                             </ul>
                         </div>
                     </div>
