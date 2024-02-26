@@ -1,6 +1,6 @@
 
-import { RouterProvider, createBrowserRouter} from "react-router-dom"
-import React, {useState,useEffect } from 'react';
+import { RouterProvider, createBrowserRouter } from "react-router-dom"
+import React, { useState, useEffect } from 'react';
 import RecapToday from "./pages/RecapToday"
 import AddTips from "./pages/AddTips"
 import BurgerMenu from './components/NavBar/BurgerMenu';
@@ -10,13 +10,13 @@ import DarkModeContext from './components/DarkMode/DarkMode';
 
 const router = createBrowserRouter([
   {
-    
-      path: "/",
-      element:
-      <div className="App">      
+
+    path: "/",
+    element:
+      <div className="App">
         <header className="App-header">
           <div className="menu-container">
-            <BurgerMenu navbarBrand="Qui travaille aujourd’hui ?"  />
+            <BurgerMenu navbarBrand="Qui travaille aujourd’hui ?" />
           </div>
         </header>
         <WhoWorks location="room" />
@@ -29,7 +29,7 @@ const router = createBrowserRouter([
       <div className="App">      
         <header className="App-header">
           <div className="menu-container">
-            <BurgerMenu navbarBrand="Qui travaille aujourd’hui ?"  />
+            <BurgerMenu navbarBrand="Qui travaille aujourd’hui ?" />
           </div>
         </header>
         <WhoWorks location="kitchen" />
@@ -40,24 +40,25 @@ const router = createBrowserRouter([
       element:
       <div className="App">     
        <header className="App-header">
+
           <div className="menu-container">
-            <BurgerMenu navbarBrand="Récapitulatif du service"  />
+            <BurgerMenu navbarBrand="Récapitulatif du service" />
           </div>
         </header><RecapToday />
-      </div> 
-    },
-    {
-      path: "/addTips",
-      element:
-      <div className="App">      
+      </div>
+  },
+  {
+    path: "/addTips",
+    element:
+      <div className="App">
         <header className="App-header">
           <div className="menu-container">
-            <BurgerMenu navbarBrand="Ajouter un pourboire"  />
+            <BurgerMenu navbarBrand="Ajouter un pourboire" />
           </div>
         </header>
-       <AddTips />
-      </div> 
-    }
+        <AddTips />
+      </div>
+  }
   ,
 ])
 
@@ -73,15 +74,14 @@ function App() {
 
 
   useEffect(() => {
-    const elements = document.querySelectorAll('*');
-    elements.forEach(el => {
-      if (darkMode) {
-        el.setAttribute('data-bs-theme', 'dark');
-      } else {
-        el.removeAttribute('data-bs-theme');
-      }
-    });
+    const body = document.body;
+    if (darkMode) {
+      body.setAttribute('data-bs-theme', 'dark');
+    } else {
+      body.removeAttribute('data-bs-theme');
+    }
   }, [darkMode]);
+
 
   return (
     <DarkModeContext.Provider value={{ darkMode, toggleDarkMode }}>
