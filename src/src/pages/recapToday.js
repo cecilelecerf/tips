@@ -8,10 +8,9 @@ import { getSelectedEmployees } from "../LocalStorageService";
 
 const RecapToday = () => {
     const selectedEmployees = [...getSelectedEmployees()];
-    console.log(selectedEmployees)
     return (
         <main className="d-flex flex-column justify-content-between">
-            <NavLocation defaultLocation= "service" />
+            <NavLocation location= "service" />
             <p className="text-primary fw-bold fs-5 text-center">Employés sélectionnés</p>
             <EmployeeList height="200px" data={selectedEmployees} resume={true} />
             <Switch/>

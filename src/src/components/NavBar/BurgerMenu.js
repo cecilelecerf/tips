@@ -37,7 +37,7 @@ function BurgerMenu(props) {
                             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                                 <div className='menu1'>
                                     <li className="nav-item">
-                                        <NavLink className="nav-link active" aria-current="page" to="/whoWorks"><ServiceIcon /> Service</NavLink>
+                                        <NavLink className="nav-link active" aria-current="page" to="/room"><ServiceIcon /> Service</NavLink>
                                     </li>
                                     <li className="nav-item">
                                         <p className="nav-link" href="#"><AdminIcon /> Administrateur</p>
