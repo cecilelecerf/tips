@@ -8,7 +8,9 @@
     font-size: 12px;
 
 }
-
+.offcanvas-body{
+    padding-right: 0px;
+}
 .NavBarModalOpen{
     width: 60% !important;
 }
@@ -16,17 +18,13 @@
 .NavBarBrand{
     white-space: normal;
 }
-
+.navbar-nav{
+    height: 100%;
+}
 .navbar-brand{
     width: 60%;
 }
 
-
-.text-orange {
-    color: orange;
-}
-
-
 .nav-link:hover {
-    color: orange;
+    color: #ff8b40;
 }

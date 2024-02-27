@@ -46,23 +46,23 @@ function BurgerMenu(props, { navbarBrand }) {
                         <p className={`NavBarBrand fs-1 fw-bold ${DarkModeTextColor}`}>{props.navbarBrand}</p>
                     </div>
                     <BurgerIcon onClick={handleToggle} type="button" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" />
-                    <div className={`offcanvas offcanvas-end ${isOpen ? 'show' : ''}`} tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style={{ width: '60%' }}>
+                    <div className={`offcanvas offcanvas-end ${isOpen ? 'show' : ''}`} tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style={{ width: '60%' }}>
                         <div className="offcanvas-header">
                             <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" onClick={handleToggle}></button>
                         </div>
                         <div className="offcanvas-body container">
-                            <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <ul className="navbar-nav align-items-end justify-content-between ">
                                 <div className='menu1'>
-                                    <li className="nav-item">
-                                        <NavLink className={`nav-link ${!location.pathname.includes("/admin") ? 'text-primary' : ''}`} to="/"><ServiceIcon /> Service</NavLink>
+                                    <li className="nav-item border-bottom pb-3 mb-3">
+                                        <NavLink className={`nav-link ${!location.pathname.includes("/admin") ? 'text-primary border-end border-primary border-4 pe-3' : 'pe-3'}`} to="/"><ServiceIcon /> Service</NavLink>
                                     </li>
                                     <li className="nav-item">
-                                        <NavLink to="/admin" className={`nav-link ${location.pathname.includes("/admin") ? 'text-primary' : ''}`} >
+                                        <NavLink to="/admin" className={`nav-link ${location.pathname.includes("/admin") ? 'text-primary border-end border-primary border-4 pe-3' : 'pe-3'}`} >
                                         <AdminIcon /> Administrateur
                                         </NavLink>
                                     </li>
                                 </div>
-                                <div className='menu2 position-absolute bottom-0 end-0 me-4'>
+                                <div className='menu2 align-self-center'>
                                     <li className="nav-item">
                                         <NavLink to="/" href="#" className="nav-link " >
                                         <ModifyIcon /> Modifier Service
