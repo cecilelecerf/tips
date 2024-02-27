@@ -1,13 +1,14 @@
 
-import { RouterProvider, createBrowserRouter } from "react-router-dom"
+import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom"
 import React, { useState, useEffect } from 'react';
 import RecapToday from "./pages/RecapToday"
 import AddTips from "./pages/AddTips"
 import BurgerMenu from './components/NavBar/BurgerMenu';
 import WhoWorks from "./pages/WhoWorks";
 import DarkModeContext from './components/DarkMode/DarkMode';
-import Admin from "./pages/Admin";
+import Admin from "./pages/Admin/Admin";
 import NavBarAdmin from "./components/Admin/NavBar/NavBar";
+import AddPeople from "./pages/Admin/AddPeople";
 
 
 const router = createBrowserRouter([
@@ -63,21 +64,44 @@ const router = createBrowserRouter([
   },
   {
     path: "/admin",
-    element:
-      <div className="App">
-        <header className="App-header">
-          <div className="menu-container">
-            <BurgerMenu navbarBrand="Adminstrateur" />
-          </div>
-        </header>
-        <Admin />
-
-        <NavBarAdmin/>
-      </div>
+    element: <RootAdmin />,
+    children:[
+      {
+        path: "",
+        element: 
+        <>        
+          <header className="App-header">
+            <div className="menu-container">
+              <BurgerMenu navbarBrand="Adminstrateur" />
+            </div>
+          </header>
+          <Admin />
+        </>
+      },
+      {
+        path: "addPeople",
+        element: 
+        <>        
+          <header className="App-header">
+            <div className="menu-container">
+              <BurgerMenu navbarBrand="Ajout d'employés" />
+            </div>
+          </header>
+          <AddPeople />
+        </>
+      }
+    ]
   }
 ])
 
-
+function RootAdmin (){
+  return (
+    <div className="App">
+      <Outlet />
+      <NavBarAdmin/>
+    </div>
+  )
+}
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
