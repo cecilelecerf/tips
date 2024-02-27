@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Alert from '../components/Alert/Alert';
 import Button from "../components/Button/Button";
 import FormItem from "../components/Form/FormItem";
 import FormPill from "../components/Form/FormPill";
+import DarkModeContext from '../components/DarkMode/DarkMode';
+
 
 const AddTips = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [tipAmount, setTipAmount] = useState();
-  const [darkMode, setDarkMode] = useState(false); // Ajoutez cette ligne si vous n'avez pas déjà un state pour le mode sombre
+  const darkMode = useContext(DarkModeContext);
 
   const handleManualInput = (event) => {
     setTipAmount(event.target.value);
@@ -18,6 +20,7 @@ const AddTips = () => {
     setIsOpen(true);
     setTimeout(() => setIsOpen(false), 5000);
   };
+
 
   return (
     <form className="d-flex flex-column justify-content-between">
