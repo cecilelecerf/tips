@@ -1,7 +1,11 @@
 # tips
 
+# instal
+npm i
+
 # start
 npm run build
+go to localhost:3000
 
 # route
 - /
