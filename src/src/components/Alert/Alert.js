@@ -2,7 +2,7 @@ import { ReactComponent as CheckIcon } from './CheckIcon.svg';
 import './Alert.css';
 
 const Alert = ({ text, checkIcon, darkMode }) => {
-    const alertClass = darkMode ? 'alert-dark' : 'alert-light';
+    const alertClass = darkMode ? 'alert-light' : 'alert-dark';
 
     return (
         <div className={`alert ${alertClass}`}>
