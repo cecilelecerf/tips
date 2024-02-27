@@ -20,3 +20,13 @@
 .navbar-brand{
     width: 60%;
 }
+
+
+.text-orange {
+    color: orange;
+}
+
+
+.nav-link:hover {
+    color: orange;
+}
