@@ -9,10 +9,11 @@ function EmployeeList(props) {
   const handleEmployeeClick = (employee) => {
     props.onEmployeeSelect(employee);
   };
+  console.log(props.readOnly)
   return (
     <div className="EmployeeList overflow-x-scroll" style={containerStyle}>
       {props.data.map((employee, index) => (
-        <div key={index} onClick={() => handleEmployeeClick(employee)}>
+        <div key={index}  onClick={() => !props.readOnly ? handleEmployeeClick(employee): ""}>
           <SingleEmployee name={employee.name} locationPill={"kitchen"} resume={props.resume} />
         </div>
       ))}
