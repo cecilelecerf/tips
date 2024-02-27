@@ -20,6 +20,8 @@ a {
 button {
   border: none;
   background-color: transparent;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 body {
