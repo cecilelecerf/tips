@@ -24,7 +24,7 @@ const RecapToday = () => {
 
             <NavLocation location= "service" />
             <p className="text-primary fw-bold fs-5 text-center">Employés sélectionnés</p>
-            <EmployeeList height="320px" data={selectedEmployees} resume={true} /><div className="align-self-center">
+            <EmployeeList height="320px" data={selectedEmployees} resume={true} readOnly={true} /><div className="align-self-center" >
 
             <Switch/>
             </div>
