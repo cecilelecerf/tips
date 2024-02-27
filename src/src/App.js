@@ -9,6 +9,7 @@ import DarkModeContext from './components/DarkMode/DarkMode';
 import Admin from "./pages/Admin/Admin";
 import NavBarAdmin from "./components/Admin/NavBar/NavBar";
 import AddPeople from "./pages/Admin/AddPeople";
+import AmountToPay from "./pages/Admin/AmountToPay";
 
 
 const router = createBrowserRouter([
@@ -88,6 +89,18 @@ const router = createBrowserRouter([
             </div>
           </header>
           <AddPeople />
+        </>
+      },
+      {
+        path: "amountPeople",
+        element: 
+        <>        
+          <header className="App-header">
+            <div className="menu-container">
+              <BurgerMenu navbarBrand="Montant à payer" />
+            </div>
+          </header>
+          <AmountToPay />
         </>
       }
     ]

@@ -4,26 +4,25 @@ import "./SingleEmployee.css"
 import  { useState } from "react";
 
 import { getSelectedEmployees } from "../../../LocalStorageService";
-function SingleEmployee(props) {
-  // const isEmployeeSelected = getSelectedEmployees().some((emp) => emp.name === props.name);
-  const [isEmployeeSelected, setIsEmployeeSelect] = useState(getSelectedEmployees().some((emp) => emp.name === props.name));
+function SingleEmployee({name, resume, locationPill, money}) {
+  const [isEmployeeSelected, setIsEmployeeSelect] = useState(getSelectedEmployees().some((emp) => emp.name === name));
   const handleClick=()=>{
-    setIsEmployeeSelect(! getSelectedEmployees().some((emp) => emp.name === props.name))
+    setIsEmployeeSelect(! getSelectedEmployees().some((emp) => emp.name === name))
   }
   
-  if(props.resume){
+  if(resume){
     return (
       <div className="Employee d-flex justify-content-between p-2 border-bottom">
         <div className="d-flex align-items-center">
           <PicturePeople />
-          <p className="ms-3 mb-0">{props.name}</p>
+          <p className="ms-3 mb-0">{name}</p>
         </div>
-          {props.locationPill &&(
-            <LocationPill location={props.locationPill} />
+          {locationPill &&(
+            <LocationPill location={locationPill} />
           )}
           {
-            props.money&&(
-              <p className="text-primary">{props.money} €</p>
+            money&&(
+              <p className={money!==true ? "text-primary": "text-success"}>{money !== true ? `${money} €` : "Payé"}</p>
             )
           }
       </div>
@@ -34,7 +33,7 @@ function SingleEmployee(props) {
     <div className={`Employee d-flex p-3 border mb-1 rounded ${isEmployeeSelected ? 'border-primary' : 'border-gray'}`} onClick={handleClick}>
       <div className="d-flex align-items-center">
         <PicturePeople />
-        <p className="ms-3 mb-0">{props.name}</p>
+        <p className="ms-3 mb-0">{name}</p>
       </div>
       <input
         type="checkbox"

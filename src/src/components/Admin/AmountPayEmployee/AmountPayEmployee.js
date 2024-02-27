@@ -7,7 +7,7 @@ function AmountPayEmployee(){
         <>
             <div className="d-flex justify-content-between align-items-center">
                 <p className="text-primary fw-bold fs-6">Montant à payer par employé</p>
-                <NavLink className="text-primary rounded rounded-pill bg-primary-subtle py-1 px-2 fs-6">Voir tout</NavLink>
+                <NavLink to="amountPeople" className="text-primary rounded rounded-pill bg-primary-subtle py-1 px-2 fs-6">Voir tout</NavLink>
             </div>
             <div>
                 {people.filter(person => person.price !== undefined).slice(0,2).map((person, index) =>(
