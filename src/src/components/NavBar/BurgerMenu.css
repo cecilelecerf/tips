@@ -1,0 +1,30 @@
+.btn-rounded {
+    border: 2px solid red;
+    border-radius: 50px;
+    padding: 10px 20px;
+    color: crimson;
+    height: 35px;
+    width: 120px;
+    font-size: 12px;
+
+}
+.offcanvas-body{
+    padding-right: 0px;
+}
+.NavBarModalOpen{
+    width: 60% !important;
+}
+
+.NavBarBrand{
+    white-space: normal;
+}
+.navbar-nav{
+    height: 100%;
+}
+.navbar-brand{
+    width: 60%;
+}
+
+.nav-link:hover {
+    color: #ff8b40;
+}

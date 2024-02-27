@@ -1,0 +1,13 @@
+.Employee{
+    justify-content: space-between;
+
+}
+.Employee > div {
+    font-weight: bold;
+}
+.Employee > *:not(div){
+    margin : auto 0;
+}
+.Employee #exampleCheck1{
+    margin: auto 0 !important
+}
