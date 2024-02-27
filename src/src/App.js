@@ -1,8 +1,8 @@
 
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom"
 import React, { useState, useEffect } from 'react';
-import RecapToday from "./pages/RecapToday"
-import AddTips from "./pages/AddTips"
+import RecapToday from "./pages/recapToday"
+import AddTips from "./pages/addTips"
 import BurgerMenu from './components/NavBar/BurgerMenu';
 import WhoWorks from "./pages/WhoWorks";
 import DarkModeContext from './components/DarkMode/DarkMode';

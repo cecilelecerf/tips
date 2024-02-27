@@ -21,7 +21,7 @@ function WhoWorks(props) {
   return (
     <main className="d-flex flex-column justify-content-between">
       <NavLocation location={props.location} />
-      <EmployeeList height="500px" data={people.filter(person => person.location === props.location)} onEmployeeSelect={handleEmployeeSelect} />
+      <EmployeeList height="450px" data={people.filter(person => person.location === props.location)} onEmployeeSelect={handleEmployeeSelect} />
       <NavLink to={props.location==="room"?"/kitchen":"/recapToday"}>
         <Button text="Suivant" icons={true} />
       </NavLink>
