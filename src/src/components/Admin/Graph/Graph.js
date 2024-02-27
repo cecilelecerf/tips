@@ -1,4 +1,5 @@
-import NavDate from "../NavDate/NavDate"
+
+import NavDate from "../SelectDate/NavDate/NavDate";
 import "./Graph.css"
 import { ReactComponent as GraphSVG } from './GraphSvg.svg';
 function Graph(){
