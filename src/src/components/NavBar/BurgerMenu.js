@@ -22,7 +22,7 @@ function BurgerMenu(props, { navbarBrand }) {
     const { darkMode } = useContext(DarkModeContext);
     const [isOpen, setIsOpen] = useState(false);
 
-    const navBarStyle = darkMode ? "navbar bg-dark fixed-top" : "navbar  fixed-top";
+    const navBarStyle = darkMode ? "navbar bg-dark fixed-top" : "navbar bg-white fixed-top";
     const containerClass = darkMode ? 'bg-dark ' : '';
     const DarkModeTextColor = darkMode ? 'text-light' : 'text-dark';
     const [isModifyModalOpen, setIsModifyModalOpen] = useState(false);
